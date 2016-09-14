@@ -11,10 +11,14 @@ We managed to consume over 100,000 messages/ sec using this lib.
 ## How to Run:
 
 This is how you start your job:
+```
 spark-streaming-direct-kafka/src/main/java/com/spark/streaming/tools/StreamingEngine.java
+```
 
 Configs are self explanatory and can be changed here:
+```
 spark-streaming-direct-kafka/src/main/resources/streaming.yml
+```
 
 
 
