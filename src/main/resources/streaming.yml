@@ -1,0 +1,39 @@
+# The maximum rate (in messages per second) at which each
+# Kafka partition will be read by this direct API
+sparkStreamingKafkaMaxRatePerPartition: 100
+#sparkStreamingKafkaMaxRatePerPartition: 5
+repartitionCount: 5
+
+# Batch Interval
+streamingBatchIntervalInSec: 5
+
+# Uniquely identifies version of the app.
+# Used for namespace for kafka client and checkpoint dir
+namespace: dev_20160912T01
+
+# Kafka Properties
+kafkaTopics: test
+kafkaBrokers: localhost:9092
+#kafkaAutoOffsetReset: largest
+kafkaAutoOffsetReset: largest
+kafkaGroupId: group1
+kafkaMaxFetchBytes: 6048576
+zkKafka: localhost:2181
+
+# Offsets are stored in different ZK.
+#zkOffsetManager: localhost:2181
+zkOffsetManager: localhost:2181
+
+# Kafka Sink - Producer Kafka
+#producerKafkaBrokers: localhost:9092
+#producerKafkaBrokers: kafka-08-broker-staging-vip.snc1:9092
+producerKafkaBrokers: localhost:9092
+producerAckEnabled: false
+producerKafkaType: async
+producerMetadataRefreshInterval: 15000
+producerKafkaTopicPrefix: topic-
+producerKafkaTopic: out
+producerKafkaErrorMessagesTopic: error
+
+# Switch this on when running app locally
+localMode: true
